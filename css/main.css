@@ -8,20 +8,25 @@ html {
 }
 
 body {
+	max-width: 1200px;
+	width: 90%;
 	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 	font-size: 1em;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-flow: row wrap;
 
 }
 
 .container{
 	max-width: 1200px;
+	width: 90%;
 	margin: 0 auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-flow: row wrap;
 }
 
 h1,
@@ -53,37 +58,50 @@ p {
 
 /*The widths are in a percentage!*/
 header {
-	height: 110px;
+	max-width: 1200px;
+	width: 90%;
+	height: inherit;
 	border-bottom: 3px solid #77a466;
-	margin: 0 auto;
+	margin: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-flow: row wrap; 
 }
 
 header h1 {
 	float: left;
-	margin: 0;
-	padding: 38px 0;
+	margin: 10px 0 0 0;
+
 }
+
 header h1 span {
 	color: #77a466;
 }
 
 header nav {
 	float: right;
-	padding: 46px 0;
+	max-width: 1200px;
+	width: 90%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
+	text-align: center;
 }
+
 header nav ul {
-	margin: 0;
-	padding: 0;
+	margin:0px;
+	padding: 20px;
+
 }
+
 header nav ul li {
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: .875em;
-	padding: 0 10px;
-	display: inline;
+	display: inherit;
+	margin: 10px;
 }
 header nav ul li a{
 	text-decoration: none;
@@ -93,17 +111,22 @@ header nav ul li a{
 /*The widths are in a percentage!*/
 .top-section,
 .bottom-section {
+	max-width: 1200px;
+	width: 90%;
 	margin: 0 auto;
 	clear: both;
-	display: flex;
+	display: inherit;
 	justify-content: center;
 	align-items: center;
+	flex-flow: row wrap;
+
 }
 
 .main-image {
 	height: auto;
 	float: left;
 }
+
 .main-image img {
 	width: 100%;
 	border-bottom: 3px solid #77a466;
@@ -114,7 +137,7 @@ header nav ul li a{
 	float: left;
 }
 .main-title h3 {
-	text-align: left;
+	text-align: center;
 	padding: 5px 0;
 	color: #77a466;
 }
@@ -122,29 +145,33 @@ header nav ul li a{
 	padding: 0;
 	font-size: 1em;
 	line-height: 25px;
+	text-align: center;
 }
 
 .section-one,
 .section-two,
 .section-three {
-	width: 33%;
+	width: 100%;
 	height: auto;
 	float: left;
 	border-top: 1px solid #eee;
+	text-align: left;
 }
 
 .section-one h4 {
 	padding: 10px 0;
 }
 
+/*
 .section-two {
 	border-left: 1px solid #eee;
 	border-right: 1px solid #eee;
 }
+*/
 
 .section-two h4,
 .section-three h4 {
-	padding: 10px 30px;
+	padding: 10px 0px;
 }
 
 .menu {
@@ -160,15 +187,19 @@ header nav ul li a{
 	color: #333;
 	font-size: 1em;
 	line-height: 21px;
+	padding: 0;
 }
 
 .address {
 	font-size: 1em;
 	line-height: 24px;
+	padding: 0;
 }
 
 /*The widths are in a percentage!*/
 footer {
+	max-width: 1200px;
+	width: 90%;
 	height: 50px;
 	border-top: 3px solid #eee;
 	margin: 0 auto;
@@ -177,10 +208,52 @@ footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-flow: row wrap;
 }
 footer span {
 	font-family: 'Wisdom Script', cursive;
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: .875em;
+}
+
+/*** Media Queries ***/
+
+@media all and (min-width: 768px) {
+	/* Tablet styles here */
+
+.bottom-section{
+	
+}
+
+.section-one {
+
+}
+
+.section-two {
+
+}
+
+.section-three {
+
+}
+
+}
+
+@media all and (min-width: 1200px) {
+	/* Desktop styles here */
+
+	header nav ul {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.bottom-section {
+		max-width: 1200px;
+		width: 33%;
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+		flex-flow: row wrap;
+	}
 }
