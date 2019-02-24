@@ -9,7 +9,7 @@ html {
 
 body {
 	max-width: 1200px;
-	width: 90%;
+	width: 100%;
 	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
 	font-size: 1em;
 	display: flex;
@@ -21,8 +21,8 @@ body {
 
 .container{
 	max-width: 1200px;
-	width: 90%;
-	margin: 0 auto;
+	width: 100%;
+	margin: 0 10px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -59,7 +59,7 @@ p {
 /*The widths are in a percentage!*/
 header {
 	max-width: 1200px;
-	width: 90%;
+	width: 100%;
 	height: inherit;
 	border-bottom: 3px solid #77a466;
 	margin: 0;
@@ -82,7 +82,7 @@ header h1 span {
 header nav {
 	float: right;
 	max-width: 1200px;
-	width: 90%;
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -112,7 +112,7 @@ header nav ul li a{
 .top-section,
 .bottom-section {
 	max-width: 1200px;
-	width: 90%;
+	width: 100%;
 	margin: 0 auto;
 	clear: both;
 	display: inherit;
@@ -156,6 +156,7 @@ header nav ul li a{
 	float: left;
 	border-top: 1px solid #eee;
 	text-align: left;
+
 }
 
 .section-one h4 {
@@ -199,7 +200,7 @@ header nav ul li a{
 /*The widths are in a percentage!*/
 footer {
 	max-width: 1200px;
-	width: 90%;
+	width: 100%;
 	height: 50px;
 	border-top: 3px solid #eee;
 	margin: 0 auto;
@@ -222,22 +223,35 @@ footer span {
 @media all and (min-width: 768px) {
 	/* Tablet styles here */
 
-.bottom-section{
-	
-}
+	header nav ul {
+		display: flex;
+		justify-content: space-between;
+	}
 
-.section-one {
+	.bottom-section{
+		max-width: 1200px;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+		flex-flow: row wrap;
+		margin: 0px 15px;
+	}
 
-}
+	.section-one {
+		width: 33%;
+		height: 300px;
+	}
 
-.section-two {
+	.section-two {
+		width: 33%;
+		height: 300px;
+	}
 
-}
-
-.section-three {
-
-}
-
+	.section-three {
+		width: 33%;
+		height: 300px;
+	}
 }
 
 @media all and (min-width: 1200px) {
@@ -246,14 +260,31 @@ footer span {
 	header nav ul {
 		display: flex;
 		justify-content: space-between;
+		font-size: 1.15em
 	}
 
 	.bottom-section {
 		max-width: 1200px;
-		width: 33%;
+		width: 100%;
 		display: flex;
 		justify-content: space-between;
 		align-content: center;
 		flex-flow: row wrap;
+		margin: 0px 15px;
+
+	}
+
+	.section-one {
+		width: 33%;
+		height: 200px;
+	}
+
+	.section-two {
+		width: 33%;
+		height: 200px;
+	}
+	.section-three {
+		width: 33%;
+		height: 200px;
 	}
 }
